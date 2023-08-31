@@ -1,0 +1,16 @@
+version: "3"
+services:
+  bf-api:
+    container_name: bf-api
+    build: .
+    environment:
+      - APP_NAME=bf-api
+    ports:
+      - "8081:8081"
+    networks:
+      - sbc
+
+networks:
+  sbc:
+    name: sbc
+    driver: bridge

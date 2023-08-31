@@ -6,6 +6,7 @@ from app.utils.preprocessing import mens_to_input
 from app.utils.siri import compute_siri
 from cerberus import Validator
 from app import app
+from flask_cors import cross_origin
 from flask_cors import CORS
 
 
@@ -15,6 +16,11 @@ scaler = joblib.load("app/services/scaler_bodyfat_estimator.pkl")
 
 input_schema = schema
 validator = Validator(input_schema)
+
+
+@app.route("/test")
+def test():
+    return jsonify({"prediction": "GOOD !"}), 200
 
 
 @app.route("/predict", methods=["POST"])
