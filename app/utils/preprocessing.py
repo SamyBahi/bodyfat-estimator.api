@@ -3,7 +3,22 @@ import pandas as pd
 
 def mens_to_input(mens: dict) -> pd.DataFrame:
     mens_df = pd.DataFrame(mens)
-
+    mens_df = mens_df[
+        [
+            "Age",
+            "Weight",
+            "Height",
+            "Abdomen",
+            "Neck",
+            "Chest",
+            "Thigh",
+            "Biceps",
+            "Forearm",
+            "Wrist",
+            "Ankle",
+            "Knee",
+        ]
+    ]
     input = mens_df.copy()
 
     input["AAnRatio"] = input["Abdomen"] / input["Ankle"]

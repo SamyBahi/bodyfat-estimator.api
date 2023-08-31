@@ -6,8 +6,10 @@ from app.utils.preprocessing import mens_to_input
 from app.utils.siri import compute_siri
 from cerberus import Validator
 from app import app
+from flask_cors import CORS
 
 
+cors = CORS(app)
 model = joblib.load("app/services/rf_bodyfat_estimator.pkl")
 scaler = joblib.load("app/services/scaler_bodyfat_estimator.pkl")
 
