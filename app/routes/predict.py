@@ -18,11 +18,6 @@ input_schema = schema
 validator = Validator(input_schema)
 
 
-@app.route("/test")
-def test():
-    return jsonify({"prediction": "GOOD !"}), 200
-
-
 @app.route("/predict", methods=["POST"])
 def predict():
     try:
