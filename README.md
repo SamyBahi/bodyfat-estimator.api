@@ -1,6 +1,6 @@
 This Flask app is the back end part of an AI Based bodyfat estimator. It is coupled with a NextJS frontend that you can find [here](https://github.com/SamyBahi/bodyfat-estimator.web) The web app uses Machine Learning to estimate your density taking your mensurations as an input, and computes your bodyfat according to Siri's formula (1956).
 
-You can find my approach to predicting density from mensurations (that led to the model that is currently used on the backend) on [this notebook](https://github.com/SamyBahi/bodyfat-estimation)
+You can find my approach to predicting density from mensurations (that led to the model that is currently used on the backend) on [this notebook](https://github.com/SamyBahi/bodyfat-estimation).
 
 ## Getting Started
 
